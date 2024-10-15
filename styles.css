@@ -1,0 +1,259 @@
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 0px;
+}
+
+#sidebar {
+    grid-row-start: 1;
+    grid-row-end: 7;
+    background-color: #1A92D3;
+    color: white;
+    font-size: larger;
+}
+
+#dashboard {
+    font-size: xx-large;
+    margin-left: 67px;
+    margin-top: 10px;
+}
+
+#dashboard img {
+    height: 40px;
+    position: absolute;
+    filter: invert(1);
+    left: 20px;
+}
+
+#first-sidebar-items li {
+    margin-bottom: 10px;
+    margin-left: 30px;
+    list-style-type: none;
+}
+
+#first-sidebar-items img {
+    height: 20px;
+    position: absolute;
+    left: 30px;
+    filter: invert(1);
+}
+
+#second-sidebar-items li {
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+#second-sidebar-items {
+    margin-top: 50px;
+    list-style-type: none;
+}
+
+#second-sidebar-items img {
+    height: 20px;
+    position: absolute;
+    left: 30px;
+    filter: invert(1);
+}
+
+#pseudo-welcome {
+    height: 20px;
+}
+
+#header {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+#first-header-row {
+    display: flex;
+    margin-top: 10px;
+}
+
+#search-logo {
+    margin: 23px 15px 30px 40px;
+}
+
+#search-logo img {
+    height: 20px;
+}
+
+#alarm-logo {
+    margin: 23px 15px 30px 100px;
+}
+
+#alarm-logo img {
+    height: 20px;
+}
+
+#first-header-pseudo {
+    margin-top: 24px;
+    font-weight: bold;
+    font-size: large;
+}
+
+#first-header-row-img {
+    margin: 20px 40px 30px 10px;
+}
+
+#first-header-row-img img {
+    height: 30px;
+    border-radius: 50%;
+}
+
+input[type=search] {
+    margin: 20px 20px 0px 0px;
+    height: 25px;
+    width: 500px;
+    background-color: #E2E8F0;
+    border: none;
+    border-radius: 10px;
+}
+
+#second-header-row {
+    display: flex;
+    padding-top: 0px;
+}
+
+#second-header-row-img {
+    margin: 20px 40px 30px 40px;
+}
+
+#second-header-row-img img {
+    height: 60px;
+    border-radius: 50%;
+}
+
+#header-buttons {
+    display: flex;
+    margin-left: 200px;
+    gap: 50px;
+    align-items: center;
+}
+
+input[type=button] {
+    height: 40px;
+    width: 100px;   
+    border-radius: 10px;
+    background-color: #1A92D3;
+    color: white;
+    border-color:  #1A92D3;
+}
+
+#second-header-pseudo {
+    font-size: larger;
+    font-weight: bold;
+    width: 300px;
+}
+
+#main-content {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 7;
+    background-color: #E2E8F0;
+    padding-top: 20px;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 10px;
+    gap: 30px;
+}
+
+.article {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.article-icons  {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    margin-right: 10px;
+}
+
+.article-icons img {
+    height: 20px;
+    left: 60px;
+    align-items: right;
+}
+
+.article > p:first-of-type{
+    font-weight: bold;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;  
+}
+
+#annoucement-articles{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+#annoucement-articles > div{
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+}
+
+#trending-articles {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#trending-articles > div{
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+.account {
+    display: flex;
+    gap: 10px;
+}
+
+.account div {
+    margin-top: 5px;
+}
+
+.account img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.account div p:nth-child(2) {
+    color: gray;
+    margin-top: -10px;
+}
+
+
+
+#right-content {
+    padding: 10px;
+}
+
+
+/* * {
+    outline: 2px solid red;
+} */
+

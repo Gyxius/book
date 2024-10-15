@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sidebar">
+        <p id="dashboard"><img src="images/view-dashboard.svg">Dashboard</p>
+        <ul id="first-sidebar-items">
+            <li><img src="images/home-variant-outline.svg">Home</li>
+            <li><img src="images/card-account-details-outline.svg">Profile</li>
+            <li><img src="images/message-reply.svg">Messages</li>
+            <li><img src="images/clock-time-three.svg">History</li>
+            <li><img src="images/file-multiple-outline.svg">Tasks</li>
+            <li><img src="images/account-group.svg">Communities</li>
+        </ul>
+        <ul id="second-sidebar-items">
+            <li><img src="images/cog.svg">Settings</li>
+            <li><img src="images/help-box.svg">Support</li>
+            <li><img src="images/shield-check.svg">Privacy</li>
+        </ul>
+    </div>
+    <div id="header">
+        <div id="first-header-row">
+            <p id="search-logo"><img src="images/magnify.svg"></p>
+            <input type="search">
+            <p id="alarm-logo"><img src="images/bell-ring-outline.svg"></p>
+            <p id="first-header-row-img"><img src="images/yellow.webp"></p>
+            <p id="first-header-pseudo">Morgan Oakley</p>
+        </div>
+        <div id="second-header-row">
+            <p id="second-header-row-img"><img src="images/yellow.webp"></p>
+            <div id="pseudo-welcome">
+                <p>Hi there,</p>
+                <p id="second-header-pseudo">Morgan Oakley (@Morgan)</p>
+            </div>
+            <div id="header-buttons">
+                <input type="button" value="New">
+                <input type="button" value="Upload">
+                <input type="button" value="Share">
+            </div>
+        </div>
+    </div>
+    <div id="main-content">
+        <div id="left-content">
+            <h3>Your Books</h3>
+            <div id="articles">
+                <!-- <div class="article" data-index="10">
+                    <p>Super Cool Project</p>
+                    <p>
+                        The sunset painted the sky in hues of orange and pink as the cool breeze whispered through the trees. In the distance, the soft rustling of leaves accompanied the distant chatter of birds settling into their nests. 
+                        <div class="article-icons">
+                            <img src="images/star-check-outline.svg" class="remove" data-index="10">
+                            <img src="images/eye-plus-outline.svg">
+                            <img src="images/share-variant-outline.svg">
+                        </div>
+                    </p>
+                </div> -->
+            </div>
+        </div>
+        <div id="right-content">
+            <div id="#annoucement">
+                <h3>Form</h3>
+                <div id="annoucement-articles">
+                    <div>
+                        <h4>Add a new book</h4>
+                        <form>
+                            <label for="title">What is the title of the book?</label>
+                            <input type="text" id="title" name="title"><br>
+                            <br>
+                            <label for="author">Who is the author of the book?</label>
+                            <input type="text" id="author" name="author"><br>
+                            <br>
+                            <label for="pages">How many pages?</label><br>
+                            <input type="text" id="pages" name="pages"><br>
+                            <br>
+                            <div>Have you already read the book?</div>
+                            <input type="radio" id="read" name="read" value="Yes">
+                            <label for="read">Yes</label><br>
+                            <input type="radio" id="notread" name="read" value="No">
+                            <label for="notread">No</label><br>
+                            <br>
+                            <button type="submit">Add book</button>
+                            <br>
+                            <br>
+                        </form>
+                       
+                </div>
+            </div>
+            <div id="#trending">
+                <h3>Trendings</h3>
+                <div id="trending-articles">
+                    <div class="account">
+                        <p><img src="images/purple.webp"></p>
+                        <div>
+                            <p>@tegan</p>
+                            <p>World Peace Builder</p>
+                        </div>
+                    </div>
+                    <div class="account">
+                        <p><img src="images/blue.webp"></p>
+                        <div>
+                            <p>@gyxius</p>
+                            <p>Super Cool Project</p>
+                        </div>
+                    </div>
+                    <div class="account">
+                        <p><img src="images/pink.webp"></p>
+                        <div>
+                            <p>@bob</p>
+                            <p>Life Changing App</p>
+                        </div>
+                    </div>
+                    <div class="account">
+                        <p><img src="images/green.webp"></p>
+                        <div>
+                            <p>@john</p>
+                            <p>No Traffic Maker</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@ function Book(title, author, pages, read, id) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.read = read;
+    this.read = read; // test
     this.id = id;
     this.info = function() {
       if (this.read) {

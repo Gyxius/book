@@ -1,19 +1,21 @@
-/////////////////////////// BOOK CONSTRUCTOR ///////////////////////////////
-function Book(title, author, pages, read, id) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read; // test
-    this.id = id;
-    this.info = function() {
-      if (this.read) {
-        return this.title + " by " + this.author + ", " + this.pages + " pages" + ", " + "read";
-      }
-      else {
-        return this.title + " by " + this.author + ", " + this.pages + " pages" + ", " + "not read yet";
-      }
+/////////////////////////// BOOK CLASS ///////////////////////////////
+class Book {
+    constructor(title, author, pages, read, id) { 
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.id = id;
     }
-    this.displayBook = function() {
+    info() {
+        if (this.read) {
+          return this.title + " by " + this.author + ", " + this.pages + " pages" + ", " + "read";
+        }
+        else {
+          return this.title + " by " + this.author + ", " + this.pages + " pages" + ", " + "not read yet";
+        }
+    }
+    displayBook() {
         //  loops through the array and displays each book on the page
         const articlesDiv = document.getElementById("articles");
         let newDiv = document.createElement("div");
@@ -32,16 +34,19 @@ function Book(title, author, pages, read, id) {
                             `
         articlesDiv.appendChild(newDiv);
     }
-  }
-/////////////////////////// LIBRARY CONSTRUCTOR ///////////////////////////////
-function Library() {
-    this.myLibrary = [];
-    this.id = 0;
-    this.addBookToLibrary = function(bookTitle, bookAuthor, bookPages, bookRead) {
+}
+/////////////////////////// LIBRARY CLASS ///////////////////////////////
+class Library {
+    constructor() { 
+        this.myLibrary = [];
+        this.id = 0;
+    }
+
+    addBookToLibrary(bookTitle, bookAuthor, bookPages, bookRead) {
             this.myLibrary.push(new Book(bookTitle, bookAuthor, bookPages, bookRead, this.id));
             this.id += 1;
     }
-    this.displayLibrary = function() {
+    displayLibrary() {
         for (let book of this.myLibrary) {
             let element = document.querySelector(`div.article[data-index="${book.id}"]`);
             if (element === null || element === undefined ) {
@@ -49,13 +54,13 @@ function Library() {
             }  
         }
     }
-    this.resetPage = function() {
+    resetPage() {
         let articleDivs = document.querySelectorAll('.article');
         articleDivs.forEach(article => {
             article.remove();
         });
     }
-    this.removeBookFromLibrary = function(bookId) {
+    removeBookFromLibrary(bookId) {
         for (let i = 0; i<this.myLibrary.length; i++) {
             if (this.myLibrary[i].id === Number(bookId)) {
                 console.log("Found book with ID:", bookId);
@@ -68,7 +73,7 @@ function Library() {
         this.displayLibrary();
     }
 
-    this.updateReadStatus = function(bookId) {
+    updateReadStatus(bookId) {
         for (let i = 0; i<this.myLibrary.length; i++) {
             if (this.myLibrary[i].id === Number(bookId)) {
                 this.myLibrary[i].read = !this.myLibrary[i].read;

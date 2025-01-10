@@ -69,16 +69,16 @@
                         <h4>Add a new book</h4>
                         <form>
                             <label for="title">What is the title of the book?</label>
-                            <input type="text" id="title" name="title"><br>
+                            <input type="text" id="title" name="title" required><br>
                             <br>
                             <label for="author">Who is the author of the book?</label>
-                            <input type="text" id="author" name="author"><br>
+                            <input type="text" id="author" name="author" required><br>
                             <br>
                             <label for="pages">How many pages?</label><br>
-                            <input type="text" id="pages" name="pages"><br>
+                            <input type="number" id="pages" name="pages" required><br>
                             <br>
                             <div>Have you already read the book?</div>
-                            <input type="radio" id="read" name="read" value="Yes">
+                            <input type="radio" id="read" name="read" value="Yes" required>
                             <label for="read">Yes</label><br>
                             <input type="radio" id="notread" name="read" value="No">
                             <label for="notread">No</label><br>
